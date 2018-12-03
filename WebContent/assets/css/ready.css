@@ -2140,8 +2140,6 @@ body {
 }
 .sidebar .sidebar-wrapper {
   position: relative;
-  max-height: calc(100vh - 75px);
-  min-height: 100%;
   overflow: auto;
   width: 260px;
   z-index: 4;
