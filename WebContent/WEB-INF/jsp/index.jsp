@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -127,11 +128,16 @@
 					float:left">
 					    <div id="article-part1" style="width:46%;height:460px;border:1px #D0D0D0 solid;
 					    margin-left:20px;margin-top:20px;float:left">
-					        <ul type="disc" style="margin-top:15px">
-					          <li><a href="#">hahahhah</a></li>
-					          <li><a href="#">aaaaaaaa</a></li>
-					          <li><a href="#">bbbbbbbb</a></li>
-					        </ul>
+<!-- 					        <ul type="disc" style="margin-top:15px"> -->
+<%-- 					          <li><a href="#">${poList}</a></li> --%>
+<!-- 					          <li><a href="#">aaaaaaaa</a></li> -->
+<!-- 					          <li><a href="#">bbbbbbbb</a></li> -->
+<!-- 					        </ul> -->
+                         <P style="margin-top:15px">
+                           <c:forEach items="${poList}" var="u">
+                                <a href="#">${u.post_title}</a><br/>
+                           </c:forEach>
+                           </P>
 					    </div>
 					    <div id="article-part2" style="width:46%;height:460px;border:1px #D0D0D0 solid;
 					    margin-right:20px;margin-top:20px;float:right"></div>
